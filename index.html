@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fotoğraflar</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Add custom wallpaper to the website */
+    body {
+      background-image: url('resimler/.jpg'); /* Replace with the path to your wallpaper image */
+      background-size: cover; /* Ensure the wallpaper covers the entire screen */
+      background-repeat: no-repeat; /* Prevent the wallpaper from repeating */
+      background-attachment: fixed; /* Keep the wallpaper fixed while scrolling */
+      background-position: center; /* Center the wallpaper */
+      color: #fff; /* Optional: Set text color to white for better contrast */
+    }
+
+    /* Optional: Add a transition effect for smoother resizing */
+    .draggable-video {
+      transition: width 0.2s ease, height 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <ul class="gallery">
+    <li draggable="true"><img src="resimler/1.jpg"/></li>
+    <li draggable="true"><img src="resimler/2.jpg"/></li>
+    <li draggable="true"><img src="resimler/3.jpg"/></li>
+    <li draggable="true"><img src="resimler/4.jpg"/></li>
+    <li draggable="true"><img src="resimler/5.jpg"/></li>
+    <li draggable="true"><img src="resimler/6.jpg"/></li>
+    <li draggable="true"><img src="resimler/7.jpg"/></li>
+    <li draggable="true"><img src="resimler/8.jpg"/></li>
+    <li draggable="true"><img src="resimler/9.jpg"/></li>
+    <li draggable="true"><img src="resimler/10.jpg"/></li>
+    <li draggable="true"><img src="resimler/11.jpg"/></li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/1.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/2.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/3.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/4.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/5.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/6.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/7.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/8.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/9.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true">
+      <video controls style="width: 150px; height: auto;" class="draggable-video">
+        <source src="resimler/10.mp4" type="video/mp4">
+        Tarayıcın videoyu desteklemiyor.
+      </video>
+    </li>
+    <li draggable="true"><img src="resimler/bilgi.png"/></li>
+  </ul>
+
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    // JavaScript to handle resizing videos during drag events
+    const videos = document.querySelectorAll('.draggable-video');
+
+    videos.forEach(video => {
+      video.addEventListener('dragstart', () => {
+        video.style.width = '450px';
+        video.style.height = 'auto';
+      });
+
+      video.addEventListener('dragend', () => {
+        video.style.width = '150px';
+        video.style.height = 'auto';
+      });
+    });
+  </script>
+</body>
+</html>
